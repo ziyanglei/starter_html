@@ -1,0 +1,24 @@
+html{
+    scroll-behavior:smooth;
+}
+
+body > a:first-child{
+    position:absolute;
+    top:-50px;
+}
+
+body > a:first-child:focus{
+    top:0px;
+}
+
+.current{
+    color:darkgreen;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    width: 100%;
+}
