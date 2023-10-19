@@ -1,0 +1,226 @@
+
+html{
+    scroll-behavior:smooth;
+}
+
+body > a:first-child {
+    position: absolute;
+    top: -50px;
+    left: 40px;
+}
+
+body > a:first-child:focus {
+    top: 0px;
+}
+
+.current-page {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center; /* Horizontally center the text */
+    line-height: 100px; /* Adjust this value based on the height of your container */
+    height: 100px; /* Adjust this value based on the height of your container */
+    display: flex;
+    justify-content: center; /* Horizontally center within the container */
+    align-items: center; /* Vertically center within the container */
+}
+/* Center align nav items */
+nav {
+    display:flex;
+    justify-content: left;
+    background: #dbcccc00;
+    padding: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 10px;
+    font-size: 25px;
+}
+
+/* Create a grid for "pet" sections---------------------------------------------------larger screen */
+.pets-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* border and background design*/
+.pets1, .pets2, .pets3, .pets4, .pets5 {
+    border: 0px solid #333;
+    border-radius: 5px;
+    box-shadow:-10px -10px 30px #FFFFFF,
+    10px 10px 30px rgba(174, 174, 192, 0.4);
+    padding: 20px;
+    text-align: center;
+    max-width: 500px;
+    max-height: 700px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    overflow: scroll;
+}
+
+.pets1 img, .pets2 img, .pets3 img, .pets4 img, .pets5 img {
+    max-width: 500px;
+    max-height: 350px;
+}
+
+.pets1 p, .pets2 p, .pets3 p, .pets4 p, .pets5 p {
+    max-width: 80%; /* text width */
+    margin: 0 auto;
+}
+
+
+/* Create a grid for "pet" sections---------------------------------------------------mobile device */
+@media (max-width: 768px) {
+    nav {
+        display:flex;
+        justify-content: center;
+        background: #dbcccc00;
+        padding: 50px;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        display: inline;
+        margin: 10px;
+        font-size: 15px;
+    }
+
+    .pets-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .pets1, .pets2, .pets3, .pets4, .pets5 {
+        max-width: 90%;
+        max-height: none;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: -5px -5px 15px #FFFFFF, 5px 5px 15px rgba(174, 174, 192, 0.4);
+        overflow: hidden;
+    }
+
+    .pets1 img, .pets2 img, .pets3 img, .pets4 img, .pets5 img {
+        max-width: 100%;
+        max-height: none;
+    }
+
+    .pets1, .pets2, .pets3, .pets4, .pets5 {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+/* Create a grid for "travel" sections-------------------------------------------------larger screen */
+.travel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* border and background design*/
+.yosemite, .maui, .napa, .honolulu, .pittsburgh, .lasvegas {
+    border: 0px solid #333;
+    border-radius: 10px;
+    box-shadow:-10px -10px 30px #FFFFFF,
+    10px 10px 30px rgba(174, 174, 192, 0.4);
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    max-height: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    overflow:scroll;
+}
+
+
+.yosemite img, .maui img, .napa img, .honolulu img, .pittsburgh img, .lasvegas img {
+    max-width: 500px;
+    max-height: 400px;
+}
+
+.yosemite p, .maui p, .napa p, .honolulu p, .pittsburgh p, .lasvegas p {
+    max-width: 80%; /* text width */
+    margin: 0 auto;
+}
+
+/* Create a grid for "travel" sections-------------------------------------------------mobile device */
+
+@media (max-width: 768px) {
+    nav {
+        display:flex;
+        justify-content: left;
+        background: #dbcccc00;
+        padding: 50px;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        display: inline;
+        margin: 10px;
+        font-size: 15px;
+    }
+
+    .travel-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .yosemite, .maui, .napa, .honolulu, .pittsburgh, .lasvegas {
+        max-width: 90%;
+        max-height: none;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: -5px -5px 15px #FFFFFF, 5px 5px 15px rgba(174, 174, 192, 0.4);
+        overflow: hidden;
+    }
+
+    .yosemite img, .maui img, .napa img, .honolulu img, .pittsburgh img, .lasvegas img {
+        max-width: 100%;
+        max-height: none;
+    }
+}
